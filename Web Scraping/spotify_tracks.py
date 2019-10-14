@@ -1,3 +1,7 @@
+# This code is an exercise based on the video tutorial found at https://www.youtube.com/watch?v=XQgXKtPSzUI 
+# It uses web scraping to extract the title, artist and album of the first 30 songs from the "Today's Top Hits" 
+# playlist on spotify. This information is then written to a CSV file entitled "spotify_tracks.csv".
+
 from urllib.request import urlopen
 from bs4 import BeautifulSoup as soup
 
