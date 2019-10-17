@@ -1,7 +1,7 @@
-# This code starts by creating a CSV file for each of my chosen playlists.
-# Each CSV contains information for every track in the playlist along with 
-# the date the track was added to the file. When rerun it appends new 
-# tracks to the playlist. A new folder and files are created each year.
+# This code uses the Spotify API and Spotipy library to create a CSV file for each of
+# my chosen playlists. Each CSV contains information for every track in the playlist
+# along with the date the track was added to the file. When rerun it appends any new 
+# tracks to the CSV. A new folder and files are created each year.
 
 # Future Updates: Automatically run this program at scheduled times.
 
