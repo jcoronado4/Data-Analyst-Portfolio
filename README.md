@@ -10,6 +10,8 @@ This portfolio contains exercises and projects in topics relating to data analyt
 
 [Spotify Playlists Tracks](https://github.com/jcoronado4/Data-Analyst-Portfolio/blob/master/APIs/spotify_playlists_tracks.py): This code uses the Spotify API and Spotipy library to create a CSV file for each of my chosen playlists. Each CSV contains information for every track in the playlist along with the date the track was added to the file. When rerun it appends any new tracks to the CSV. A new folder and files are created each year.
 
+[Spotify Genre Sorter](https://github.com/jcoronado4/Data-Analyst-Portfolio/blob/master/APIs/spotify_genre_sorter.py): This code uses the Spotify API and Spotipy library to take in a spotify playlist URI as an input and sorts the tracks of the playlist by decade into new saved playlists.
+
 ## Future Topics:
 ### SQL Project
 ### Machine Learning Techniques 
