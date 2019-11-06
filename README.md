@@ -12,6 +12,9 @@ This portfolio contains exercises and projects in topics relating to data analyt
 
 [Spotify Genre Sorter](https://github.com/jcoronado4/Data-Analyst-Portfolio/blob/master/APIs/spotify_genre_sorter.py): This code uses the Spotify API and Spotipy library to take in a spotify playlist URI as an input and sorts the tracks of the playlist by decade into new saved playlists.
 
+[Extract Billboard Tracks](https://github.com/jcoronado4/Data-Analyst-Portfolio/blob/master/APIs/extract_billboard_tracks.py): This code uses the billboard.py API to extract information from a given billboard chart in a given time frame. It creates a folder and file for each year in the time frame and outputs CSV files containing the track title and artist.
+
 ## Future Topics:
+
 ### SQL Project
 ### Machine Learning Techniques 
