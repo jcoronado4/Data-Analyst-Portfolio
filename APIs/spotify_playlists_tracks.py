@@ -133,13 +133,13 @@ playlist_tracks_file("Spotify", "spotify:playlist:37i9dQZF1DXcZDD7cfEKhW")
 liked_songs_tracks_file()
 
 # Create Text File Showing When Code was Run
-filename = "spotify_api.txt"
+filename = "spotify_playlist_tracks.txt"
 if os.path.exists(filename):
     f = open(filename, 'a')
     f.write(str(now) + "\n")
 else:
     f = open(filename, 'w')
-    f.write("spotify_api.py was run at the following times: \n")
+    f.write("spotify_playlist_tracks.py was run at the following times: \n")
     f.write("\n")
     f.write(str(now) + "\n")
 f.close()
