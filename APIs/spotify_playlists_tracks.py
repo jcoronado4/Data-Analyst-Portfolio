@@ -32,7 +32,8 @@ def get_track_info(tracks):
     name = tracks['track']['name'].replace(",","|")
     artist = tracks['track']['artists'][0]['name'].replace(",","|")
     album = tracks['track']['album']['name'].replace(",","|")
-    return(name + "," + artist + "," + album)
+    uri = tracks['track']['uri']
+    return(name + "," + artist + "," + album + "," + uri)
 
 # Creates a CSV File for Each Playlist
 def playlist_tracks_file(username, uri):
@@ -48,9 +49,11 @@ def playlist_tracks_file(username, uri):
         f = open(file_path, 'a')
         tracks = results['tracks']['items']
         for i in range(len(tracks)):
-            track_info = get_track_info(tracks[i])
-            if not track_info in csv_contents:
-                f.write(track_info + "," + today + "\n")
+        	if not tracks[i]['track'] == None:
+        		# Get track info if the object is a track
+        		track_info = get_track_info(tracks[i])
+        		if not track_info in csv_contents:
+        			f.write(track_info + "," + today + "\n")
     # Otherwise Create New File
     else:
         f = open(file_path, 'w')
@@ -58,8 +61,9 @@ def playlist_tracks_file(username, uri):
         f.write(header)
         tracks = results['tracks']['items']
         for i in range(len(tracks)):
-            track_info = get_track_info(tracks[i])
-            f.write(track_info + "," + today + "\n")
+        	if not tracks[i]['track'] == None:
+        		track_info = get_track_info(tracks[i])
+        		f.write(track_info + "," + today + "\n")
     f.close()
 
 # Creates a CSV File for my Liked Songs
@@ -137,6 +141,7 @@ filename = "spotify_playlist_tracks.txt"
 if os.path.exists(filename):
     f = open(filename, 'a')
     f.write(str(now) + "\n")
+
 else:
     f = open(filename, 'w')
     f.write("spotify_playlist_tracks.py was run at the following times: \n")
